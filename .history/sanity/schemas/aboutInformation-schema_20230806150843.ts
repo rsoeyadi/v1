@@ -1,0 +1,3 @@
+const aboutInformation = {
+    name: 'abou'
+}
