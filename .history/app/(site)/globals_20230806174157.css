@@ -2,6 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-p {
-  margin-bottom: 1em;
-}
