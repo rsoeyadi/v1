@@ -30,6 +30,8 @@ export default async function Hero() {
               url={`${socialMediaIcon.link}`}
               style={{ height: 40, width: 40 }}
               bgColor="#e2e8f0"
+              target="_blank"
+              rel="noopener noreferrer"
             />
           </li>
         ))}

@@ -1,6 +1,7 @@
 import { createClient, groq } from "next-sanity";
 import clientConfig from "./config/client-config";
 import { ProfileImage } from "@/types/ProfileImage";
+import { Job } from "@/types/Job";
 
 export async function getAboutInformation() {
     return createClient(clientConfig).fetch(
@@ -29,6 +30,19 @@ export async function getProfileImage(): Promise<ProfileImage> {
             _createAt,
             name,
             "image": image.asset->url,
+        }`
+    )
+}
+
+export async function getJobs(): Promise<Job[]> {
+    return createClient(clientConfig).fetch(
+        groq`*[_type == "job"]{
+            _id,
+            _createAt,
+            company,
+            position,
+            dates,
+            description,
         }`
     )
 }

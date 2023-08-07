@@ -1,7 +1,7 @@
 import { getAboutInformation } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
-import Link from "next/link";
 import Hero from "../components/Hero";
+import Experience from "../components/Experience";
 
 export default async function Home() {
   const aboutInformation = await getAboutInformation();
@@ -11,6 +11,7 @@ export default async function Home() {
       <Hero />
       <div className="md:w-1/2 md:py-23 lg:py-24 ">
         <PortableText value={aboutInformation.content} />
+        <Experience />
       </div>
     </div>
   );
