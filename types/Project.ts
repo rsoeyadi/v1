@@ -8,4 +8,4 @@ export type Project = {
   image: string;
   technologies: string[];
   description: PortableTextBlock[];
-}
+};

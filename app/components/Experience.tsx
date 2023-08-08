@@ -6,20 +6,18 @@ export default async function Experience() {
 
   return (
     <div>
-      {jobs.map((job) => {
-        return (
-          <JobCard
-            key={job.company}
-            company={job.company}
-            position={job.position}
-            description={job.description}
-            imgSource={job.image}
-            imgAlt={job.company + "" + job.position}
-            dates={job.dates}
-            technologies={job.technologies}
-          ></JobCard>
-        );
-      })}
+      {jobs.map((job) => (
+        <JobCard
+          key={job.company}
+          company={job.company}
+          position={job.position}
+          description={job.description}
+          imgSource={job.image}
+          imgAlt={job.company + " " + job.position}
+          dates={job.dates}
+          technologies={job.technologies}
+        />
+      ))}
     </div>
   );
 }

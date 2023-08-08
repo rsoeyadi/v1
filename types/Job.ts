@@ -9,4 +9,4 @@ export type Job = {
   image: string;
   description: PortableTextBlock[];
   technologies: string[];
-}
+};

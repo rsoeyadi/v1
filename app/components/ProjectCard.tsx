@@ -24,15 +24,20 @@ export default function ProjectCard({
   technologies,
 }: ProjectCardProps) {
   const [mounted, setMounted] = useState(false);
+
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  if (!mounted) return <></>;
+  if (!mounted) return null;
 
   return (
     <Link href={link} target="_blank">
-      <div className="px-6 pt-4 pb-2 mb-10 lg:grid lg:grid-cols-2 md:gap-4 rounded overflow-hidden shadow-2xl shadow-blue-500/20 hover:-translate-y-1 hover:scale-105 duration-300 ">
+      <div
+        className="
+        px-6 pt-4 pb-2 mb-10 lg:grid lg:grid-cols-2 md:gap-4 rounded overflow-hidden shadow-2xl shadow-blue-500/20 hover:-translate-y-1 hover:scale-105 duration-300
+      "
+      >
         <div className="pb-3">
           <Image src={imgSource} alt={imgAlt} width={200} height={200} />
         </div>
@@ -45,7 +50,9 @@ export default function ProjectCard({
             {technologies.map((technology) => (
               <span
                 key={technology}
-                className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                className="
+                  inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2
+                "
               >
                 {technology}
               </span>

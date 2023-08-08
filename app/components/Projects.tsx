@@ -6,19 +6,17 @@ export default async function Experience() {
 
   return (
     <div>
-      {projects.map((project) => {
-        return (
-          <ProjectCard
-            name={project.name}
-            link={project.link}
-            description={project.description}
-            imgSource={project.image}
-            imgAlt={project.name}
-            technologies={project.technologies}
-            key={project.name}
-          ></ProjectCard>
-        );
-      })}
+      {projects.map((project) => (
+        <ProjectCard
+          name={project.name}
+          link={project.link}
+          description={project.description}
+          imgSource={project.image}
+          imgAlt={project.name}
+          technologies={project.technologies}
+          key={project.name}
+        />
+      ))}
     </div>
   );
 }
