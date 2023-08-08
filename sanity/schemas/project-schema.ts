@@ -9,12 +9,23 @@ const project = {
             type: 'string',
         },
         {
+            name: 'link',
+            title: 'Link to project',
+            type: 'string',
+        },
+        {
             name: 'image',
-            title: 'Image',
+            title: 'Image (should be around 835x835)',
             type: 'image',
             options: {
                 hotspot: true,
             }
+        },
+        {
+            name: 'technologies',
+            title: "Technologies Used",
+            type: 'array',
+            of: [{ type: "string" }]
         },
         {
             name: 'description',

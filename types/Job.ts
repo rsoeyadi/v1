@@ -8,4 +8,5 @@ export type Job = {
   dates: Date[];
   image: string;
   description: PortableTextBlock[];
+  technologies: string[];
 }

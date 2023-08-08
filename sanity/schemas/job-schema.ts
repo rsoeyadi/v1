@@ -9,6 +9,14 @@ const job = {
             type: 'string',
         },
         {
+            name: 'image',
+            title: 'Logo',
+            type: 'image',
+            options: {
+                hotspot: true,
+            }
+        },
+        {
             name: 'position',
             title: 'Position',
             type: 'string',
@@ -25,6 +33,12 @@ const job = {
             type: 'array',
             of: [{ type: "block" }]
         },
+        {
+            name: 'technologies',
+            title: "Technologies Used",
+            type: 'array',
+            of: [{ type: "string" }]
+        }
     ]
 }
 

@@ -2,6 +2,7 @@ import { createClient, groq } from "next-sanity";
 import clientConfig from "./config/client-config";
 import { ProfileImage } from "@/types/ProfileImage";
 import { Job } from "@/types/Job";
+import { Project } from "@/types/Project";
 
 export async function getAboutInformation() {
     return createClient(clientConfig).fetch(
@@ -40,9 +41,25 @@ export async function getJobs(): Promise<Job[]> {
             _id,
             _createAt,
             company,
+            "image": image.asset->url,
             position,
             dates,
             description,
+            technologies
+        }`
+    )
+}
+
+export async function getProjects(): Promise<Project[]> {
+    return createClient(clientConfig).fetch(
+        groq`*[_type == "project"]{
+            _id,
+            _createAt,
+            name,
+            link,
+            "image": image.asset->url,
+            description,
+            technologies
         }`
     )
 }
