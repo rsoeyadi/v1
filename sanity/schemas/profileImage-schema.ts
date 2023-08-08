@@ -10,7 +10,7 @@ const profileImage = {
         },
         {
             name: 'image',
-            title: 'Image',
+            title: 'Image (should be a perfect square)',
             type: 'image',
             options: {
                 hotspot: true,
