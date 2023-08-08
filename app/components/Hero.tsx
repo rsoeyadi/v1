@@ -14,8 +14,8 @@ export default async function Hero() {
         max-md:grid max-md:place-items-center md:sticky md:top-0 md:flex md:max-h-screen md:w-1/2 md:flex-col md:py-23 lg:py-24
       "
       >
-        <h1 className="text-4xl sm:text-5xl font-bold">
-          <Link href="/">Ryan Soeyadi</Link>
+        <h1 className="text-3xl sm:text-4xl font-bold">
+          <Link href="/">Hi, I'm Ryan Soeyadi</Link>
         </h1>
         <h2 className="mt-3 text-xl sm:text-xl font-medium">
           Software Engineer

@@ -12,7 +12,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="md:flex md:justify-between md:gap-4">
+    <div className="md:flex md:justify-between md:gap-4 ">
       <Hero />
       <div className="md:w-1/2 md:py-23 lg:py-24">
         {sections.map(({ title, component }) => (

@@ -33,31 +33,33 @@ export default function ProjectCard({
 
   return (
     <Link href={link} target="_blank">
-      <div
-        className="
-        px-6 pt-4 pb-2 mb-10 lg:grid lg:grid-cols-2 md:gap-4 rounded overflow-hidden shadow-2xl shadow-blue-500/20 hover:-translate-y-1 hover:scale-105 duration-300
+      <div className="mb-10 px-6 pt-4 pb-2 md:gap-4 rounded overflow-hidden shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] hover:-translate-y-1 hover:scale-105 duration-300">
+        <div
+          className="
+         lg:grid lg:grid-cols-2 lg:gap-5
       "
-      >
-        <div className="pb-3">
-          <Image src={imgSource} alt={imgAlt} width={200} height={200} />
-        </div>
-        <div className="pb-2">
-          <h5 className="text-2xl font-bold">{name}</h5>
-          <div className="font-normal">
-            <PortableText value={description} />
+        >
+          <div className="pb-3">
+            <Image src={imgSource} alt={imgAlt} width={200} height={200} />
           </div>
-          <div className="pt-4">
-            {technologies.map((technology) => (
-              <span
-                key={technology}
-                className="
+          <div className="pb-2">
+            <h5 className="text-2xl font-bold">{name}</h5>
+            <div className="font-normal">
+              <PortableText value={description} />
+            </div>
+          </div>
+        </div>
+        <div>
+          {technologies.map((technology) => (
+            <span
+              key={technology}
+              className="
                   inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2
                 "
-              >
-                {technology}
-              </span>
-            ))}
-          </div>
+            >
+              {technology}
+            </span>
+          ))}
         </div>
       </div>
     </Link>
