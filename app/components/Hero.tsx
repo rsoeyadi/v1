@@ -30,7 +30,6 @@ export default async function Hero() {
               <SocialIcon
                 url={`${socialMediaIcon.link}`}
                 style={{ height: 40, width: 40 }}
-                bgColor="#e2e8f0"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full transition transform hover:scale-125"
