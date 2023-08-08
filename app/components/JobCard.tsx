@@ -30,7 +30,7 @@ export default function JobCard({
 }: JobCardProps) {
   return (
     <div
-      className="rounded overflow-hidden shadow-2xl bg-gradient-to-l from-blue-700 via-blue-800 to-gray-900 transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-300 mb-10"
+      className="rounded overflow-hidden shadow-2xl bg-gradient-to-tl from-blue-800 to-indigo-800 transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-300 mb-10"
       key={position}
     >
       <Image

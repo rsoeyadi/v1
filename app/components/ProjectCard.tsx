@@ -32,7 +32,7 @@ export default function ProjectCard({
 
   return (
     <Link href={link} target="_blank">
-      <div className="px-6 pt-4 pb-2 mb-10 lg:grid lg:grid-cols-2 md:gap-4 rounded overflow-hidden shadow-2xl bg-gradient-to-tr from-blue-700 via-blue-800 to-gray-900 transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-300">
+      <div className="px-6 pt-4 pb-2 mb-10 lg:grid lg:grid-cols-2 md:gap-4 rounded overflow-hidden shadow-2xl bg-gradient-to-tl from-blue-800 to-indigo-800 transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-300">
         <div className="pb-3">
           <Image src={imgSource} alt={imgAlt} width={200} height={200} />
         </div>
