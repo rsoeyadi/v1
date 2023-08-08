@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 html {
- 
     @apply tracking-tight;
+}
+
+p {
+    margin-bottom: 0.5em;
 }
