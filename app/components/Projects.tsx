@@ -16,7 +16,6 @@ export default async function Experience() {
   );
   firstGroup.sort((a, b) => a.name.localeCompare(b.name));
   const finalSortedProjects = firstGroup.concat(secondGroup);
-
   return (
     <div>
       {finalSortedProjects.map((project) => (
