@@ -4,10 +4,7 @@ import { Link } from "react-scroll";
 
 const Navigation = () => {
   return (
-    <nav
-      className="nav lg:block cursor-pointer"
-      aria-label="In-page jump links"
-    >
+    <nav className="nav lg:block" aria-label="In-page jump links">
       <ul className="mt-10 w-max">
         {["about", "experience", "projects"].map((section) => (
           <li key={section}>
