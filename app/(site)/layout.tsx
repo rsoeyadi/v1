@@ -3,7 +3,6 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Head from "next/head";
-import { getSocialImage } from "@/sanity/sanity-utils";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -38,6 +37,18 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  openGraph: {
+    type: "website",
+    url: "https://ryansoeyadi.com",
+    title: "Ryan Soeyadi | Software Engineer",
+    description: "Ryan Soeyadi's Portfolio Site",
+    siteName: "Ryan Soeyadi | Software Engineer",
+    images: [
+      {
+        url: "https://ryansoeyadi.com/images/social.jpg",
+      },
+    ],
+  },
 };
 
 export default async function RootLayout({
@@ -45,14 +56,9 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const { image: url } = await getSocialImage();
   return (
     <html lang="en">
       <Head>
-        <meta property="og:title" content="Ryan Soeyadi | Software Engineer" />
-        <meta property="og:type" content="Website" />
-        <meta property="og:url" content="https://www.ryansoeyadi.com" />
-        <meta property="og:image" content={url} />
         <link rel="shortcut icon" href="/images/favicon.ico" />
         <link
           rel="apple-touch-icon"
