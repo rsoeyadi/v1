@@ -70,7 +70,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             }
           ></LinkSvg>
           <div className="pb-3">
-            <Image src={imgSource} alt={imgAlt} width={400} height={400} />
+            <Image
+              src={imgSource}
+              alt={imgAlt}
+              width={300}
+              height={300}
+              className="mx-auto content-center	"
+            />
           </div>
           <div className="pb-2 lg:pr-1">
             <h5 className="text-2xl font-bold inline-block">{name}</h5>
