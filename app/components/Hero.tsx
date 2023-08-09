@@ -2,6 +2,7 @@ import { getProfileImage, getSocialMediaIcons } from "@/sanity/sanity-utils";
 import Link from "next/link";
 import { SocialIcon } from "react-social-icons";
 import Image from "next/image";
+import Navigation from "./Navigation";
 
 export default async function Hero() {
   const socialMediaIcons = await getSocialMediaIcons();
@@ -30,6 +31,7 @@ export default async function Hero() {
             height={300}
           />
         </div>
+        <Navigation />
         <ul className="mb-5 mt-8 flex items-center">
           {socialMediaIcons.map((socialMediaIcon: any) => (
             <li className="mr-3 text-xs" key={socialMediaIcon.link}>

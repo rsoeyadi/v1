@@ -6,22 +6,27 @@ import Projects from "../components/Projects";
 
 export default function Home() {
   const sections = [
-    { title: "About", component: <About /> },
-    { title: "Experience", component: <Experience /> },
-    { title: "Personal Projects", component: <Projects /> },
+    { id: "about", title: "About", component: <About /> },
+    { id: "experience", title: "Experience", component: <Experience /> },
+    { id: "projects", title: "Personal Projects", component: <Projects /> },
   ];
 
   return (
     <div className="md:flex md:justify-between md:gap-4 ">
       <Hero />
       <div className="md:w-1/2 md:py-23 lg:py-24">
-        {sections.map(({ title, component }) => (
-          <div key={title} className="mb-10">
-            <h1 className="mb-4 text-2xl sm:text-3xl font-bold tracking-tight">
-              {title}
-            </h1>
-            {component}
-          </div>
+        {sections.map(({ id, title, component }) => (
+          <section id={id} key={title}>
+            <div className="mb-10">
+              <h1
+                key={title}
+                className="mb-4 text-2xl sm:text-3xl font-bold tracking-tight"
+              >
+                {title}
+              </h1>
+              {component}
+            </div>
+          </section>
         ))}
       </div>
     </div>
