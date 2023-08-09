@@ -15,7 +15,7 @@ export default async function Hero() {
       "
       >
         <h1 className="text-3xl sm:text-4xl font-bold">
-          <Link href="/">Hi, I&aposm Ryan Soeyadi</Link>
+          <Link href="/">Hi, I&apos;m Ryan Soeyadi</Link>
         </h1>
         <h2 className="mt-3 text-xl sm:text-xl font-medium">
           Software Engineer
