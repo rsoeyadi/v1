@@ -35,4 +35,9 @@ yarn-error.log*
 next-env.d.ts
 
 .history*
+public
+.eslintrc.json
+next.config.js
+postcss.config.js
+sanity.config.ts
 
