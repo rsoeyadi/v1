@@ -30,9 +30,7 @@ export default function JobCard({
 }: JobCardProps) {
   return (
     <div
-      className="
-      rounded overflow-hidden shadow-2xl shadow-blue-500/20 transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-300 mb-10
-    "
+      className="rounded overflow-hidden shadow-2xl shadow-blue-500/20 transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-300 mb-10"
       key={position}
     >
       <Image
@@ -46,7 +44,7 @@ export default function JobCard({
       <div className="px-6 py-4">
         <div className="font-bold text-lg mb-2">{company}</div>
         <div className="text-sm font-bold mb-2">{position}</div>
-        {dates.length === 2 && (
+        {dates.length == 2 && (
           <p className="text-sm font-bold mb-2">
             {formatDate(dates[0].toString())} -&nbsp;
             {formatDate(dates[1].toString())}
@@ -57,19 +55,19 @@ export default function JobCard({
             {formatDate(dates[0].toString())}
           </p>
         )}
-        <PortableText value={description} />
+        <PortableText value={description} />{" "}
       </div>
       <div className="px-6 pt-4 pb-2">
-        {technologies.map((technology) => (
-          <span
-            key={technology}
-            className="
-              inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2
-            "
-          >
-            {technology}
-          </span>
-        ))}
+        {technologies.map((technology) => {
+          return (
+            <span
+              key={technology}
+              className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+            >
+              {technology}
+            </span>
+          );
+        })}
       </div>
     </div>
   );
