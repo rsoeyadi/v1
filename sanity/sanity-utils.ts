@@ -3,7 +3,6 @@ import clientConfig from "./config/client-config";
 import { ProfileImage } from "@/types/ProfileImage";
 import { Job } from "@/types/Job";
 import { Project } from "@/types/Project";
-import { SocialImage } from "@/types/SocialImage";
 
 export async function getAboutInformation() {
     return createClient(clientConfig).fetch(
@@ -31,16 +30,6 @@ export async function getProfileImage(): Promise<ProfileImage> {
             _id,
             _createAt,
             name,
-            "image": image.asset->url,
-        }`
-    )
-}
-
-export async function getSocialImage(): Promise<SocialImage> {
-    return createClient(clientConfig).fetch(
-        groq`*[_type == "socialImage"][0]{
-            _id,
-            _createAt,
             "image": image.asset->url,
         }`
     )

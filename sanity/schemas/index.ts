@@ -3,8 +3,7 @@ import job from './job-schema';
 import project from './project-schema';
 import link from './link-schema';
 import profileImage from './profileImage-schema';
-import socialImage from './socialMediaImage-schema';
 
-const schemas = [aboutInformation, job, project, link, profileImage, socialImage];
+const schemas = [aboutInformation, job, project, link, profileImage];
 
 export default schemas
