@@ -15,7 +15,7 @@ const Navigation = () => {
               to={section}
               spy={true}
               smooth={true}
-              offset={50}
+              offset={-10}
               duration={500}
               className="cursor-pointer group flex items-center py-3 active"
             >
