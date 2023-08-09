@@ -3,7 +3,6 @@ import { PortableText } from "@portabletext/react";
 
 export default async function About() {
   const aboutInformation = await getAboutInformation();
-
   return (
     <div>
       <PortableText value={aboutInformation.content} />
