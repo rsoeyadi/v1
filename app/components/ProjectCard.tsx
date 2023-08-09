@@ -21,8 +21,8 @@ interface LinkSvgProps {
 const LinkSvg: React.FC<LinkSvgProps> = ({ className }) => {
   return (
     <svg
-      width="24"
-      height="24"
+      width="32"
+      height="32"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -62,14 +62,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
   return (
     <Link href={link} target="_blank">
-      <div className="mb-10 px-6 pt-4 pb-2 md:gap-4 rounded overflow-hidden shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] hover:-translate-y-1 hover:scale-105 duration-300">
+      <div className="relative mb-10 px-6 pt-4 pb-2 md:gap-4 rounded overflow-hidden shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] hover:-translate-y-1 hover:scale-105 duration-300">
         <div className="lg:grid lg:grid-cols-2 lg:gap-5">
+          <LinkSvg
+            className={
+              "absolute top-5 right-5 sm:top-7 sm:right-9 lg:top-1 lg:right-1"
+            }
+          ></LinkSvg>
           <div className="pb-3">
-            <LinkSvg className={"float-right lg:hidden mb-5"}></LinkSvg>
-            <Image src={imgSource} alt={imgAlt} width={300} height={300} />
+            <Image src={imgSource} alt={imgAlt} width={400} height={400} />
           </div>
-          <div className="pb-2">
-            <LinkSvg className={"max-lg:hidden lg:float-right"}></LinkSvg>
+          <div className="pb-2 lg:pr-1">
             <h5 className="text-2xl font-bold inline-block">{name}</h5>
 
             <div className="font-normal">
