@@ -13,6 +13,8 @@ export const metadata: Metadata = {
   applicationName: "Ryan Soeyadi's Portfolio Website",
   referrer: "origin-when-cross-origin",
   keywords: [
+    "Ryan Soeyad",
+    "Soeyadi",
     "Next.js",
     "React",
     "JavaScript",
