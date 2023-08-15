@@ -27,8 +27,8 @@ export default async function Hero() {
             src={url}
             alt={imageName}
             className="rounded-full"
-            width={300}
-            height={300}
+            width={200}
+            height={200}
           />
         </div>
         <Navigation />
