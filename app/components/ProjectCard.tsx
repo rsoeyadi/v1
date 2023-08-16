@@ -75,7 +75,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               alt={imgAlt}
               width={200}
               height={200}
-              className="mx-auto mb-2 content-center rounded-s-md	shadow-[rgba(0,_0,_0,_0.4)_0px_20px_20px]  duration-300 hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]"
+              className="mx-auto mb-2 content-center rounded shadow-[rgba(0,_0,_0,_0.4)_0px_20px_20px]  duration-300 hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]"
             />
           </div>
           <div className="pb-2 lg:pr-1">
