@@ -22,7 +22,7 @@ export default async function Hero() {
         <h2 className="mt-3 text-xl sm:text-xl font-medium">
           Software Engineer
         </h2>{" "}
-        <div className="inline-block">
+        <div className="inline-block py-5">
           <DarkModeButton />
         </div>
         <div className="mt-5">

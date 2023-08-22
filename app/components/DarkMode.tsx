@@ -17,7 +17,6 @@ const DarkModeButton = () => {
 
   return (
     <button
-      className="py-5"
       onClick={(e) => (theme === "dark" ? setTheme("light") : setTheme("dark"))}
     >
       {theme === "dark" ? <FaMoon /> : <FaSun />}
