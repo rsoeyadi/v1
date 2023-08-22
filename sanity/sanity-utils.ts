@@ -14,16 +14,6 @@ export async function getAboutInformation() {
     )
 }
 
-export async function getSocialMediaIcons() {
-    return createClient(clientConfig).fetch(
-        groq`*[_type == "link"]{
-            _id,
-            _createAt,
-            link
-        }`
-    )
-}
-
 export async function getProfileImage(): Promise<ProfileImage> {
     return createClient(clientConfig).fetch(
         groq`*[_type == "profileImage"][0]{

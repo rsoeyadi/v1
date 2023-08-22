@@ -1,4 +1,4 @@
-import { getProfileImage, getSocialMediaIcons } from "@/sanity/sanity-utils";
+import { getProfileImage } from "@/sanity/sanity-utils";
 import Link from "next/link";
 import { SocialIcon } from "react-social-icons";
 import Image from "next/image";

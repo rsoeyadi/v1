@@ -3,6 +3,16 @@ import Hero from "../components/Hero";
 import Experience from "../components/Experience";
 import About from "../components/About";
 import Projects from "../components/Projects";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Ryan Soeyadi's Portfolio",
+  description: "Ryan Soeyadi's portfolio website",
+  metadataBase: new URL("https://ryansoeyadi.com"),
+  openGraph: {
+    images: "https://ryansoeyadi.com/images/social.jpg",
+  },
+};
 
 export default function Home() {
   const sections = [
