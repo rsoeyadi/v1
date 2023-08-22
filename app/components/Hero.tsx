@@ -21,7 +21,6 @@ export default async function Hero() {
         <h2 className="mt-3 text-xl sm:text-xl font-medium">
           Software Engineer
         </h2>
-        <h3 className="mt-2 text-xl sm:text-xl font-medium">Pianist</h3>
         <div className="mt-5">
           <Image
             src={url}

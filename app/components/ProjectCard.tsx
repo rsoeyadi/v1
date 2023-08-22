@@ -70,7 +70,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             }
           ></LinkSvg>
           <div className="pb-3 ">
-            <Image
+            <Image 
               src={imgSource}
               alt={imgAlt}
               width={200}
