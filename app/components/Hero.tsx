@@ -6,7 +6,6 @@ import Navigation from "./Navigation";
 import DarkModeButton from "./DarkMode";
 
 export default async function Hero() {
-  const socialMediaIcons = await getSocialMediaIcons();
   const { name: imageName, image: url } = await getProfileImage();
 
   return (
@@ -36,17 +35,6 @@ export default async function Hero() {
         </div>
         <Navigation />
         <ul className="mb-5 mt-8 flex items-center">
-          {/* {socialMediaIcons.map((socialMediaIcon: any) => (
-            <li className="mr-3 text-xs" key={socialMediaIcon.link}>
-              <SocialIcon
-                url={socialMediaIcon.link}
-                style={{ height: 40, width: 40 }}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full transition transform hover:scale-125"
-              />
-            </li>
-          ))} */}
           <li className="mr-3 text-xs">
             <SocialIcon
               url="https://github.com/rsoeyadi"
