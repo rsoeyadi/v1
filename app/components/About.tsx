@@ -4,7 +4,7 @@ import { PortableText } from "@portabletext/react";
 export default async function About() {
   const aboutInformation = await getAboutInformation();
   return (
-    <div>
+    <div tabIndex={0}>
       <PortableText value={aboutInformation.content} />
     </div>
   );

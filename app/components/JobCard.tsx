@@ -30,8 +30,9 @@ export default function JobCard({
 }: JobCardProps) {
   return (
     <div
-      className="rounded overflow-hidden shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] hover:-translate-y-1 hover:scale-105 duration-300 hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] mb-10"
+      className="rounded overflow-hidden shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] hover:-translate-y-1 hover:scale-105 duration-300 hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] mb-10 dark:slate-200 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
       key={position}
+      tabIndex={0}
     >
       <Image
         src={imgSource}

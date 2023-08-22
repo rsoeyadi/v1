@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Head from "next/head";
+import { Provider } from "../components/Provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -80,9 +81,9 @@ export default async function RootLayout({
       </Head>
       <body
         className={`
-        ${inter.className} mx-auto min-h-screen max-w-screen-xl px-6 md:px-12 lg:px-24 py-12 md:py-20 lg:py-0`}
+        ${inter.className} mx-auto min-h-screen max-w-screen-xl px-6 md:px-12 lg:px-24 py-12 md:py-20 lg:py-0 dark:text-slate-300`}
       >
-        {children}
+        <Provider>{children}</Provider>
       </body>
     </html>
   );
