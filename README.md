@@ -1,7 +1,7 @@
 
 # Portfolio Website 
 
-You can visit this website at [www.ryansoeyadi.com](https://ryansoeyadi.com/). This is a NextJS 13 application built with TypeScript, React, and Tailwind CSS. The application is hooked up to Sanity Studio where I have defined schemas to update information easily.
+Visit my portfolio website at [www.ryansoeyadi.com](https://ryansoeyadi.com/). This is a Next.js 13 application built with TypeScript, React, and Tailwind CSS. The application is hooked up to Sanity Studio where I have defined schemas to update information easily.
 
 
 ## 🔗 Contact
