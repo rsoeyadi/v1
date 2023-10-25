@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <div className="md:flex md:justify-between md:gap-4 ">
       <Hero />
-      <div className="md:w-1/2 md:py-23 lg:py-24">
+      <div className="md:w-1/2 py-10">
         {sections.map(({ id, title, component }) => (
           <section id={id} key={title}>
             <div className="mb-10">

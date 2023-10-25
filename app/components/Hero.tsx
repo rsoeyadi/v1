@@ -12,7 +12,7 @@ export default async function Hero() {
     <>
       <div
         className="
-        max-md:grid max-md:place-items-center md:sticky md:top-0 md:flex md:max-h-screen md:w-1/2 md:flex-col md:py-23 lg:py-24
+        max-md:grid max-md:place-items-center md:sticky md:top-0 md:flex md:max-h-screen md:w-1/2 md:flex-col md:py-10
       "
       >
         <h1 className="text-3xl sm:text-4xl font-bold">
