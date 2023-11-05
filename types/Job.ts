@@ -6,7 +6,7 @@ export type Job = {
   company: string;
   position: string;
   dates: Date[];
-  image: string;
+  images: string[];
   description: PortableTextBlock[];
   technologies: string[];
 };

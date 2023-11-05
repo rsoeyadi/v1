@@ -11,10 +11,12 @@ const job = {
         {
             name: 'image',
             title: 'Logo',
-            type: 'image',
+            type: 'array',
+            of: [{ type: "image" }],
             options: {
                 hotspot: true,
             }
+            
         },
         {
             name: 'position',

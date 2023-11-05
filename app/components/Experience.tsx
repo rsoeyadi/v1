@@ -5,19 +5,21 @@ export default async function Experience() {
   const jobs = await getJobs();
 
   return (
-      <div>
-        {jobs.map((job) => (
+    <div>
+      {jobs.map(
+        ({ company, position, description, images, dates, technologies }) => (
           <JobCard
-            key={job.company}
-            company={job.company}
-            position={job.position}
-            description={job.description}
-            imgSource={job.image}
-            imgAlt={job.company + " " + job.position}
-            dates={job.dates}
-            technologies={job.technologies}
+            key={company}
+            company={company}
+            position={position}
+            description={description}
+            imgSource={images}
+            imgAlt={`${company} ${position}`}
+            dates={dates}
+            technologies={technologies}
           />
-        ))}
-      </div>
+        )
+      )}
+    </div>
   );
 }

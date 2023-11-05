@@ -6,10 +6,10 @@ import { Project } from "@/types/Project";
 
 export async function getAboutInformation() {
     return createClient(clientConfig).fetch(
-        groq`*[_type == "aboutInformation"][0]{
+        groq`*[_type == "aboutInformation"][0] {
             _id,
             _createAt,
-            content
+            content 
         }`
     )
 }
@@ -17,7 +17,7 @@ export async function getAboutInformation() {
 export async function getProfileImage(): Promise<ProfileImage> {
     return createClient(clientConfig).fetch(
         groq`*[_type == "profileImage"][0]{
-            _id,
+            _id, 
             _createAt,
             name,
             "image": image.asset->url,
@@ -27,15 +27,15 @@ export async function getProfileImage(): Promise<ProfileImage> {
 
 export async function getJobs(): Promise<Job[]> {
     return createClient(clientConfig).fetch(
-        groq`*[_type == "job"]{
-            _id,
+        groq`*[_type == "job"] {
+            _id, 
             _createAt,
             company,
-            "image": image.asset->url,
-            position,
-            dates,
+            position,      
+            dates,            
+            "images": image[].asset->url, 
             description,
-            technologies
+            technologies,
         }`
     )
 }

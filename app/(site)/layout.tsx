@@ -1,17 +1,19 @@
 import React from "react";
-import "./globals.css";
+import Head from "next/head";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Head from "next/head";
 import { Provider } from "../components/Provider";
+import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const siteName = "Ryan Soeyadi | Software Engineer";
+const siteDescription = "Ryan Soeyadi's Portfolio Site";
+const siteURL = "https://ryansoeyadi.com";
 
 export const metadata: Metadata = {
-  title: "Ryan Soeyadi | Software Engineer",
-  description: "Ryan Soeyadi's Portfolio Site",
+  title: siteName,
+  description: siteDescription,
   generator: "Next.js",
-  applicationName: "Ryan Soeyadi | Software Engineer",
+  applicationName: siteName,
   referrer: "origin-when-cross-origin",
   keywords: [
     "Ryan Soeyadi",
@@ -40,13 +42,13 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: "https://ryansoeyadi.com",
-    title: "Ryan Soeyadi | Software Engineer",
-    description: "Ryan Soeyadi's Portfolio Site",
-    siteName: "Ryan Soeyadi | Software Engineer",
+    url: siteURL,
+    title: siteName,
+    description: siteDescription,
+    siteName,
     images: [
       {
-        url: "https://ryansoeyadi.com/images/social.jpg",
+        url: `${siteURL}/images/social.jpg`,
       },
     ],
   },
@@ -65,7 +67,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function RootLayout({
+const inter = Inter({ subsets: ["latin"] });
+
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -83,7 +87,7 @@ export default async function RootLayout({
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="../images/favicon-32x32.png"
+          href="/images/favicon-32x32.png"
         />
         <link
           rel="icon"
@@ -93,8 +97,7 @@ export default async function RootLayout({
         />
       </Head>
       <body
-        className={`
-        ${inter.className} mx-auto min-h-screen max-w-screen-xl px-6 md:px-12 lg:px-24 py-12 md:py-20 lg:py-0 dark:text-slate-300`}
+        className={`${inter.className} mx-auto min-h-screen max-w-screen-xl px-6 md:px-12 lg:px-24 py-12 md:py-20 lg:py-0 dark:text-slate-300`}
       >
         <Provider>{children}</Provider>
       </body>
