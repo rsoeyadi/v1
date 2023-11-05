@@ -31,7 +31,7 @@ export async function getJobs(): Promise<Job[]> {
             _id, 
             _createAt,
             company,
-            position,      
+            position,       
             dates,            
             "images": image[].asset->url, 
             description,
