@@ -9,7 +9,7 @@ export async function getAboutInformation() {
         groq`*[_type == "aboutInformation"][0] {
             _id,
             _createAt,
-            content 
+            content   
         }`
     )
 }
