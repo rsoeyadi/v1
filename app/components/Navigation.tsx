@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import { Link } from "react-scroll";
 
 const Navigation = () => {
@@ -16,7 +15,7 @@ const Navigation = () => {
   return (
     <nav className="nav lg:block" aria-label="In-page jump links">
       <ul className="mt-10 w-max">
-        {["about", "experience", "projects"].map((section) => (
+        {["about", "experience"].map((section) => (
           <li key={section}>
             <Link
               to={section}

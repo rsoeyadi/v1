@@ -40,16 +40,3 @@ export async function getJobs(): Promise<Job[]> {
     )
 }
 
-export async function getProjects(): Promise<Project[]> {
-    return createClient(clientConfig).fetch(
-        groq`*[_type == "project"]{
-            _id,
-            _createAt,
-            name,
-            link,
-            "image": image.asset->url,
-            description,
-            technologies
-        }`
-    )
-}

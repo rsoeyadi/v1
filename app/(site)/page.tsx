@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import About from "../components/About";
 import Experience from "../components/Experience";
 import Hero from "../components/Hero";
-import Projects from "../components/Projects";
 
 export const metadata: Metadata = {
   title: "Ryan Soeyadi's Portfolio",
@@ -17,7 +16,6 @@ export default function Home() {
   const sections = [
     { id: "about", title: "About", component: <About /> },
     { id: "experience", title: "Experience", component: <Experience /> },
-    { id: "projects", title: "Personal Projects", component: <Projects /> },
   ];
 
   return (
