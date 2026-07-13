@@ -43,18 +43,25 @@ export default function JobCard({
       key={position}
       tabIndex={0}
     >
-      <Image
-        {...commonImageProps}
-        className={imgSource.length > 1 ? "dark:hidden" : ""}
-        alt={imgAlt}
-      />
-      {imgSource.length > 1 && (
-        <Image
-          {...commonImageProps}
-          src={imgSource[1]}
-          className="dark:block hidden"
-          alt={imgAlt}
-        />
+      {imgSource.length > 1 ? (
+        // Both variants stay laid out (opacity toggle, not display) so they
+        // lazy-load together and the theme switch doesn't wait on a fetch.
+        <div className="grid">
+          <Image
+            {...commonImageProps}
+            className="col-start-1 row-start-1 transition-opacity duration-300 dark:opacity-0"
+            alt={imgAlt}
+          />
+          <Image
+            {...commonImageProps}
+            src={imgSource[1]}
+            className="col-start-1 row-start-1 opacity-0 transition-opacity duration-300 dark:opacity-100"
+            alt={imgAlt}
+            aria-hidden
+          />
+        </div>
+      ) : (
+        <Image {...commonImageProps} alt={imgAlt} />
       )}
 
       <div className="px-6 py-4">
