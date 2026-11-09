@@ -8,15 +8,16 @@ interface JobCardProps {
   description: PortableTextBlock[];
   imgSource: string[];
   imgAlt: string;
-  dates: Date[];
+  dates: string[];
   technologies: string[];
 }
 
 function formatDate(dateString: string) {
-  const date = new Date(dateString);
-  const month = date.toLocaleString("default", { month: "long" });
-  const year = date.getFullYear();
-  return `${month} ${year}`;
+  return new Date(dateString).toLocaleDateString("en", {
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  });
 }
 
 export default function JobCard({
@@ -69,27 +70,28 @@ export default function JobCard({
         <div className="text-sm font-bold mb-2">{position}</div>
         {dates.length === 2 && (
           <p className="text-sm font-bold mb-2">
-            {formatDate(dates[0].toString())} -{" "}
-            {formatDate(dates[1].toString())}
+            {formatDate(dates[0])} - {formatDate(dates[1])}
           </p>
         )}
         {dates.length === 1 && (
           <p className="text-sm font-bold mb-2">
-            {formatDate(dates[0].toString())} - present
+            {formatDate(dates[0])} - present
           </p>
         )}
         <PortableText value={description} />
       </div>
-      <div className="px-6 pt-4 pb-2">
-        {technologies.map((technology) => (
-          <span
-            key={technology}
-            className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-          >
-            {technology}
-          </span>
-        ))}
-      </div>
+      {technologies.length > 0 && (
+        <div className="px-6 pt-4 pb-2">
+          {technologies.map((technology) => (
+            <span
+              key={technology}
+              className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+            >
+              {technology}
+            </span>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

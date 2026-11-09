@@ -7,9 +7,9 @@ export default async function Experience() {
   return (
     <div>
       {jobs.map(
-        ({ company, position, description, images, dates, technologies }) => (
+        ({ _id, company, position, description, images, dates, technologies }) => (
           <JobCard
-            key={company}
+            key={_id}
             company={company}
             position={position}
             description={description}

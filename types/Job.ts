@@ -5,7 +5,7 @@ export type Job = {
   createdAt: Date;
   company: string;
   position: string;
-  dates: Date[];
+  dates: string[];
   images: string[];
   description: PortableTextBlock[];
   technologies: string[];
