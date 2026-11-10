@@ -28,7 +28,7 @@ export default async function Hero() {
           <Image
             src={url}
             alt={imageName}
-            className="rounded-full"
+            className="aspect-square rounded-full object-cover"
             width={200}
             height={200}
           />

@@ -15,13 +15,15 @@ export async function getAboutInformation() {
 }
 
 export async function getProfileImage(): Promise<ProfileImage> {
-    return createClient(clientConfig).fetch(
+    return createClient({ ...clientConfig, useCdn: false }).fetch(
         groq`*[_type == "profileImage"][0]{
             _id, 
             _createAt,
             name,
             "image": image.asset->url,
-        }`
+        }`,
+        {},
+        { next: { revalidate: 60 } }
     )
 }
 
