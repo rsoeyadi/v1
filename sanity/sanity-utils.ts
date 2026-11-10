@@ -4,18 +4,23 @@ import { ProfileImage } from "@/types/ProfileImage";
 import { Job } from "@/types/Job";
 import { Project } from "@/types/Project";
 
+const client = createClient({ ...clientConfig, useCdn: false });
+const fetchOptions = { next: { revalidate: 60 } };
+
 export async function getAboutInformation() {
-    return createClient(clientConfig).fetch(
+    return client.fetch(
         groq`*[_type == "aboutInformation"][0] {
             _id,
             _createAt,
             content   
-        }`
+        }`,
+        {},
+        fetchOptions
     )
 }
 
 export async function getProfileImage(): Promise<ProfileImage> {
-    return createClient({ ...clientConfig, useCdn: false }).fetch(
+    return client.fetch(
         groq`*[_type == "profileImage"][0]{
             _id, 
             _createAt,
@@ -23,12 +28,12 @@ export async function getProfileImage(): Promise<ProfileImage> {
             "image": image.asset->url,
         }`,
         {},
-        { next: { revalidate: 60 } }
+        fetchOptions
     )
 }
 
 export async function getJobs(): Promise<Job[]> {
-    return createClient({ ...clientConfig, useCdn: false }).fetch(
+    return client.fetch(
         groq`*[_type == "job"] | order(dates[0] desc) {
             _id, 
             _createAt,
@@ -40,7 +45,7 @@ export async function getJobs(): Promise<Job[]> {
             "technologies": coalesce(technologies, []),
         }`,
         {},
-        { next: { revalidate: 60 } }
+        fetchOptions
     )
 }
 

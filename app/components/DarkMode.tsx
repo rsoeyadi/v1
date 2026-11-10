@@ -1,25 +1,18 @@
 "use client";
-import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { FaMoon, FaSun } from "react-icons/fa";
 
 const DarkModeButton = () => {
-  const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null;
-  }
+  const { resolvedTheme, setTheme } = useTheme();
 
   return (
     <button
-      onClick={(e) => (theme === "dark" ? setTheme("light") : setTheme("dark"))}
+      type="button"
+      aria-label="Toggle color theme"
+      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
     >
-      {theme === "dark" ? <FaMoon /> : <FaSun />}
+      <FaSun aria-hidden="true" className="dark:hidden" />
+      <FaMoon aria-hidden="true" className="hidden dark:block" />
     </button>
   );
 };

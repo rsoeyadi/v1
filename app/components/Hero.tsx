@@ -31,6 +31,7 @@ export default async function Hero() {
             className="aspect-square rounded-full object-cover"
             width={200}
             height={200}
+            priority
           />
         </div>
         <Navigation />

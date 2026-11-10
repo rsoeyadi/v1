@@ -23,7 +23,7 @@ export default function Home() {
       <Hero />
       <div className="md:w-1/2 py-10">
         {sections.map(({ id, title, component }) => (
-          <section id={id} key={id}>
+          <section id={id} key={id} className="scroll-mt-2.5">
             <div className="mb-10">
               <h1 className="mb-4 text-2xl sm:text-3xl font-bold tracking-tight">
                 {title}

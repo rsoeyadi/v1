@@ -6,6 +6,12 @@ html {
     @apply tracking-tight;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
 p {
     margin-bottom: 0.5em;
 }
