@@ -26,7 +26,7 @@ export async function getProfileImage(): Promise<ProfileImage> {
 }
 
 export async function getJobs(): Promise<Job[]> {
-    return createClient(clientConfig).fetch(
+    return createClient({ ...clientConfig, useCdn: false }).fetch(
         groq`*[_type == "job"] | order(dates[0] desc) {
             _id, 
             _createAt,
@@ -36,7 +36,9 @@ export async function getJobs(): Promise<Job[]> {
             "images": image[].asset->url, 
             description,
             "technologies": coalesce(technologies, []),
-        }`
+        }`,
+        {},
+        { next: { revalidate: 60 } }
     )
 }
 
